@@ -1,0 +1,364 @@
+
+/* ========================================
+   CABEÇALHO DA PÁGINA
+======================================== */
+
+.epi-page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+/* ========================================
+   INDICADORES DE EPIs
+======================================== */
+
+.epi-indicators {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.epi-indicator {
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        145deg,
+        #101f34,
+        #0b192b
+    );
+
+    padding: 22px;
+
+    border: 1px solid rgba(111, 172, 231, 0.14);
+    border-radius: 9px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    transition: all 0.3s ease;
+}
+
+.epi-indicator::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        var(--tech-blue),
+        var(--tech-cyan)
+    );
+}
+
+.epi-indicator:hover {
+    transform: translateY(-3px);
+    border-color: rgba(57, 198, 244, 0.3);
+    box-shadow: 0 12px 28px rgba(0, 126, 255, 0.08);
+}
+
+/* ÍCONES */
+
+.epi-indicator-icon {
+    width: 47px;
+    height: 47px;
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    background: rgba(57, 198, 244, 0.09);
+    color: var(--tech-cyan);
+
+    border: 1px solid rgba(57, 198, 244, 0.15);
+    border-radius: 8px;
+}
+
+.epi-indicator-icon.warning {
+    background: rgba(209, 139, 32, 0.10);
+    color: #f0b75b;
+    border-color: rgba(209, 139, 32, 0.22);
+}
+
+.epi-indicator span {
+    color: var(--tech-muted);
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.epi-indicator h2 {
+    font-family: var(--font-heading);
+    color: var(--tech-white);
+
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+
+    margin-top: 6px;
+}
+
+/* ========================================
+   LISTAGEM DE EPIs
+======================================== */
+
+.epi-list-panel {
+    background: linear-gradient(
+        145deg,
+        #101e32,
+        #0b192b
+    );
+
+    padding: 25px;
+
+    border: 1px solid rgba(111, 172, 231, 0.14);
+    border-radius: 9px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+/* CABEÇALHO DA LISTAGEM */
+
+.epi-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.epi-list-header h2 {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--tech-white);
+}
+
+.epi-list-header p {
+    color: var(--tech-muted);
+    font-size: 11px;
+    margin-top: 6px;
+    line-height: 1.6;
+}
+
+/* PESQUISA */
+
+.epi-search {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    min-width: 220px;
+    padding: 0 12px;
+
+    background: rgba(7, 17, 31, 0.55);
+
+    border: 1px solid rgba(111, 172, 231, 0.18);
+    border-radius: 6px;
+
+    transition: border-color 0.25s ease;
+}
+
+.epi-search:focus-within {
+    border-color: var(--tech-cyan);
+    box-shadow: 0 1px 0 rgba(57, 198, 244, 0.25);
+}
+
+.epi-search svg {
+    color: #7189a4;
+    flex-shrink: 0;
+}
+
+.epi-search input {
+    width: 100%;
+    min-width: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+    color: var(--tech-white);
+
+    padding: 12px 0;
+
+    font-family: var(--font-main);
+    font-size: 11px;
+}
+
+.epi-search input::placeholder {
+    color: #667b95;
+}
+
+/* ========================================
+   ESTADO VAZIO
+======================================== */
+
+.epi-empty {
+    text-align: center;
+    padding: 48px 20px;
+    color: var(--tech-muted);
+}
+
+.epi-empty svg {
+    color: var(--tech-cyan);
+    margin: 0 auto 15px;
+    width: 35px;
+    height: 35px;
+}
+
+.epi-empty h3 {
+    font-family: var(--font-heading);
+    color: var(--tech-white);
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.epi-empty p {
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.epi-description {
+    display: block;
+    color: var(--tech-muted);
+    margin-top: 5px;
+    font-size: 10px;
+}
+
+/* ========================================
+   SITUAÇÃO DO ESTOQUE
+======================================== */
+
+.stock-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 6px 10px;
+
+    border-radius: 5px;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+.stock-status.available {
+    color: #55d6a4;
+    background: rgba(57, 198, 160, 0.09);
+    border: 1px solid rgba(57, 198, 160, 0.2);
+}
+
+.stock-status.low {
+    color: #f0b75b;
+    background: rgba(209, 139, 32, 0.09);
+    border: 1px solid rgba(209, 139, 32, 0.2);
+}
+
+/* ========================================
+   FORMULÁRIO DO MODAL
+======================================== */
+
+.epi-modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.epi-modal label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    color: #a8b9cc;
+    margin-top: 7px;
+}
+
+.epi-modal input,
+.epi-modal textarea {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid rgba(111, 172, 231, 0.18);
+    border-radius: 6px;
+
+    outline: none;
+
+    background: rgba(7, 17, 31, 0.65);
+    color: var(--tech-white);
+
+    font-family: var(--font-main);
+    font-size: 12px;
+
+    resize: vertical;
+
+    transition: border-color 0.25s ease;
+}
+
+.epi-modal input::placeholder,
+.epi-modal textarea::placeholder {
+    color: #667b95;
+}
+
+.epi-modal input:focus,
+.epi-modal textarea:focus {
+    border-color: var(--tech-cyan);
+    box-shadow: 0 1px 0 rgba(57, 198, 244, 0.2);
+}
+
+/* GRADE DO FORMULÁRIO */
+
+.epi-modal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.epi-modal-grid > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 1000px) {
+    .epi-indicators {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .epi-page-heading,
+    .epi-list-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .epi-search {
+        width: 100%;
+    }
+
+    .epi-list-panel {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .epi-indicators {
+        grid-template-columns: 1fr;
+    }
+
+    .epi-modal-grid {
+        grid-template-columns: 1fr;
+    }
+}

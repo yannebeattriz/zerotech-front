@@ -1,0 +1,138 @@
+/* TELAS MENORES */
+
+@media (max-width: 1100px) {
+    .page-content {
+        padding: 26px 24px 34px;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* TABLETS E CELULARES */
+
+@media (max-width: 750px) {
+    .sidebar {
+        width: 75px;
+        padding: 25px 10px;
+    }
+
+    .sidebar-logo {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .sidebar-logo h2,
+    .menu-title,
+    .menu-item span,
+    .sidebar-footer {
+        display: none;
+    }
+
+    .menu-item {
+        justify-content: center;
+        padding: 13px 8px;
+    }
+
+    .header {
+        padding: 14px 15px;
+        min-height: 76px;
+    }
+
+    .header-actions {
+        gap: 12px;
+    }
+
+    .user-info div {
+        display: none;
+    }
+
+    .page-content {
+        padding: 20px 16px 30px;
+    }
+
+    .dashboard-cards,
+    .epi-indicators,
+    .module-indicators {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-bottom {
+        grid-template-columns: 1fr;
+    }
+
+    .worker-form-grid,
+    .module-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-heading,
+    .module-page-heading,
+    .epi-page-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .worker-form-panel,
+    .worker-list-panel,
+    .module-panel,
+    .settings-panel,
+    .epi-list-panel {
+        padding: 18px;
+    }
+
+    .epi-list-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* CELULARES PEQUENOS */
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 28px 22px;
+    }
+
+    .header {
+        min-height: 76px;
+    }
+
+    .header h2 {
+        font-size: 15px;
+    }
+
+    .header p {
+        max-width: 180px;
+        font-size: 11px;
+    }
+
+    .header-actions {
+        gap: 7px;
+    }
+
+    .page-content {
+        padding: 16px 12px 26px;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-card {
+        padding: 18px;
+    }
+
+    .epi-modal {
+        padding: 20px;
+    }
+
+    .epi-modal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+    }
+}

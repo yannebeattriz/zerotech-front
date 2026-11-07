@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+    /* IDENTIDADE VISUAL */
+    --primary: #087ee5;
+    --primary-hover: #159cf0;
+    --secondary: #35c5ed;
+
+    /* FUNDOS */
+    --background: #07111f;
+    --surface: #0d1b2e;
+    --surface-light: #14263d;
+
+    /* TEXTOS */
+    --text-primary: #f4f8ff;
+    --text-secondary: #91a3b9;
+    --text-muted: #627891;
+
+    /* BORDAS */
+    --border: rgba(130, 170, 210, 0.14);
+
+    /* ESTILIZAÇÃO */
+    --radius: 8px;
+    --radius-lg: 14px;
+
+    /* FONTES */
+    --font-primary: 'DM Sans', sans-serif;
+    --font-heading: 'Manrope', sans-serif;
+}
+
+/* RESET GLOBAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    background: var(--background);
+    color: var(--text-primary);
+    font-family: var(--font-primary);
+}
+
+/* TÍTULOS */
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+}
+
+/* BOTÕES */
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* INPUTS */
+
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #263e59;
+    border-radius: 10px;
+}
+
+/* SELEÇÃO */
+
+::selection {
+    background: var(--primary);
+    color: white;
+}
