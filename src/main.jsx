@@ -17,7 +17,7 @@ import "./styles/epis.css";
 
 import "./styles/responsive.css";
 import "./styles/trabalhadores.css";
-import "./styles/fichasEpi.css";
+import "./styles/fichasepi.css";
 import "./styles/documentos.css";
 import "./styles/configuracoes.css";
 createRoot(document.getElementById("root")).render(
