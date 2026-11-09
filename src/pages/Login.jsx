@@ -28,10 +28,10 @@ function Login() {
         setCarregando(true);
 
         try {
-            const resposta = await api.post("/usuarios/login", {
-                email,
-                senha
-            });
+           const resposta = await api.post("/usuarios/login", {
+    email: email.trim(),
+    senha
+});
 
             localStorage.setItem("token", resposta.data.token);
             localStorage.setItem(
